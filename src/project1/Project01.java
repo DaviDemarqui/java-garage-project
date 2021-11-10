@@ -21,6 +21,9 @@ public class Project01 {
 			String[] deathCauses = {"IN A CAR CRASH", "IN WAR", "BEING ROBBED", "FALLING OF YOUR HOUSE ROOF", "BY DRUG OVERDOSE", "WITH CANCER", "BECAUSE OF AN HEART ATTACK"};
 			int index = random.nextInt(deathCauses.length);
 			
+			System.out.println("Month: "+month);
+			System.out.println("Year: "+year);
+			
 			if(month == 12) {
 				month = 1;
 				year++;
