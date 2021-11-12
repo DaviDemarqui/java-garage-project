@@ -1,43 +1,56 @@
 package project1;
 
-import java.util.Random;
+import java.util.Scanner;
 
 public class Project01 {
 
 	public static void main(String[] args) {
 		
-		Random random = new Random();
+		Scanner scanner = new Scanner(System.in);
 		
-		int age = 0;
-		int year = 1969;
-		int month = 1;
+		System.out.println("How much cars you want to add?");
+		int garageSizeAsk = scanner.nextInt();
 		
-		while(age <= 120) {
-			
-			month++;
-			
-			int deathAge = random.nextInt(120);
-			
-			String[] deathCauses = {"IN A CAR CRASH", "IN WAR", "BEING ROBBED", "FALLING OF YOUR HOUSE ROOF", "BY DRUG OVERDOSE", "WITH CANCER", "BECAUSE OF AN HEART ATTACK"};
-			int index = random.nextInt(deathCauses.length);
-			
-			System.out.println("Month: "+month);
-			System.out.println("Year: "+year);
-			
-			if(month == 12) {
-				month = 1;
-				year++;
-				age++;
-			}
-			
-			//Death if statement
-			if(age == deathAge) {
-				System.out.println("YOU DIED AT AGE "+age+" IN THE YEAR "+year+" "+deathCauses[index]);
-				break;
-			}
-			
+		if(garageSizeAsk == 1) {
+			System.out.println("Enter your car name: ");
+			String car = scanner.next();
+			System.out.println("Your cars: "+car);
 		}
-
+		else if(garageSizeAsk == 2) {
+			String[] cars = new String[2];
+			System.out.println("Enter the name of two cars: ");
+			String car1 = scanner.next();
+			String car2 = scanner.next();
+			cars[0] = car1;
+			cars[1] = car2;
+			System.out.println("Your cars: "+car1+" "+car2);
+		}
+		else if(garageSizeAsk == 3) {
+			String[] cars = new String[3];
+			System.out.println("Enter the name of three cars: ");
+			String car1 = scanner.next();
+			String car2 = scanner.next();
+			String car3 = scanner.next();
+			cars[0] = car1;
+			cars[1] = car2;
+			cars[2] = car3;
+			System.out.println("Your cars: "+car1+" "+car2+" "+car3);
+		}
+		else if(garageSizeAsk == 4) {
+			String[] cars = new String[4];
+			System.out.println("Enter the name of four cars: ");
+			String car1 = scanner.next();
+			String car2 = scanner.next();
+			String car3 = scanner.next();
+			String car4 = scanner.next();
+			cars[0] = car1;
+			cars[1] = car2;
+			cars[2] = car3;
+			cars[3] = car4;
+			System.out.println("Your cars: "+car1+" "+car2+" "+car3+" "+car4);
+		}
+		
+			
 	}
 	
 }
