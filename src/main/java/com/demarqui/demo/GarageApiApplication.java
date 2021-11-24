@@ -7,9 +7,9 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @SpringBootApplication
-@Configuration
-@EnableAutoConfiguration
-@ComponentScan
+@Configuration //Tags the class as a source of bean definitions for the application context.
+@EnableAutoConfiguration // Tells Spring Boot to start adding beans based on classpath settings, other beans, and various property settings.
+@ComponentScan //Tells Spring to look for other components, configurations, and services
 public class GarageApiApplication {
 
 	public static void main(String[] args) {
